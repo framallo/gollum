@@ -137,6 +137,13 @@ module Precious
       mustache :search
     end
 
+    get '/all' do
+      wiki = Gollum::Wiki.new(settings.gollum_path)
+      # show first the recent updated pages
+      @pages = wiki.pages.sort_by {|p| p.authored_date }.reverse
+      mustache :all
+    end
+
     get '/*' do
       show_page_or_file(params[:splat].first)
     end

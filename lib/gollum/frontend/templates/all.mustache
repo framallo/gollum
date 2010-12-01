@@ -1,0 +1,20 @@
+<div class="guide">
+  <div class="main">
+    <div class="actions">
+      <form action="/search" method="get">
+        <a href="/">Home</a> | 
+        <a href="/edit/{{today_page}}">Today Page</a> | 
+        <input type="search" name="q" size="10" /> <input type="submit" value="search" />
+      </form>
+    </div>
+    <h1>All Pages</h1>
+    <div class="content wikistyle gollum">
+      <ul>
+      {{#pages}}
+          <li><a href="/{{name}}">{{name}} </a>{{authored_date}}</li>
+      {{/pages}}
+      </ul>
+    </div>
+  </div>
+</div>
+

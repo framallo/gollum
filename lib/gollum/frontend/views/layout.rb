@@ -15,6 +15,10 @@ module Precious
       def title
         "Home"
       end
+
+      def today_page
+        Time.now.strftime("Today: %A, %B %d %Y")
+      end
     end
   end
 end

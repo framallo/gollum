@@ -192,6 +192,13 @@ module Gollum
       end
     end
 
+    # Public: The authored date.
+    #
+    # Returns the authored date for the current version.
+    def authored_date
+      versions.first.authored_date
+    end
+
     # Public: The footer Page.
     #
     # Returns the footer Page or nil if none exists.
@@ -210,6 +217,7 @@ module Gollum
 
       find_page_in_tree(map, '_Footer', '')
     end
+
 
     # Gets a Boolean determining whether this page is a historical version.  
     # Historical pages are pulled using exact SHA hashes and format all links
