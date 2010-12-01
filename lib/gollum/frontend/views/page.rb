@@ -33,6 +33,10 @@ module Precious
         @footer ||= @page.footer
         @footer.format.to_s
       end
+
+      def today_page
+        Time.now.strftime("Today: %A, %B %d %Y")
+      end
     end
   end
 end
