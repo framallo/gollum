@@ -8,12 +8,19 @@
       </form>
     </div>
     <h1>All Pages</h1>
-    <div class="content wikistyle gollum">
-      <ul>
+    <div class="content wikistyle gollum all_pages">
+      <table>
       {{#pages}}
-          <li><a href="/{{name}}">{{name}} </a>{{authored_date}}</li>
+          <tr>
+            <td> 
+              <a href="/{{name}}">{{name}} </a> 
+            </td>
+            <td class="authored_date"> 
+              {{authored_date}}
+            </td>
+          </tr>
       {{/pages}}
-      </ul>
+      </table>
     </div>
   </div>
 </div>

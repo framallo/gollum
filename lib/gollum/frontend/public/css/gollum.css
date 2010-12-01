@@ -53,3 +53,6 @@ a.absent {
   display: block;
   text-align: right;
 }
+.all_pages .authored_date{
+  text-align:right;
+}
